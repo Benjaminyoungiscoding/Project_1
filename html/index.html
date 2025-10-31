@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Home Page</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="../html/index.html"
+        ><img src="../images/logo.jpg" alt="logo"
+      /></a>
+
+      <button id="nav-toggle" onclick="openLinks()">☰</button>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="../html/products/index.html">Products</a></li>
+          <li><a href="../html/lorem ipsum/index.html">Lorem Ipsum</a></li>
+          <li><a href="../html/empty/index.html">Empty</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Welcome To Rock Buddy</h1>
+          <h3>The Go-To Place For All Your Rock Needs</h3>
+
+          <p>Finding your true rock mate is hard. But we made it easy.</p>
+          <p>
+            At Rock Buddy, we have every rock you could ever think of. We know
+            you'll find the right rock for you.
+          </p>
+          <picture>
+            <!--feature photo-->
+            <img
+              src="../images/man-holding-large-rock-sicily.jpg"
+              alt="man holding large rock"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section class="testimonial">
+        <p>
+          "Before Rock Buddy, I had a hard time finding the right rock for me.
+          <strong>Now I can't go anywhere without my Rock Buddy."</strong>
+        </p>
+        <p>- Harry Otter, Rock Buddy User</p>
+      </section>
+
+      <section class="product-highlight">
+        <h2>Rock Buddy Highlight: Big Rock</h2>
+        <div class="feature-product">
+          <img src="../images/small_rock.jpg" alt="Featured product image" />
+          <div class="product-info">
+            <p>
+              It's big and large. Sourced from mountains, this is the biggest
+              rock we have in our inventory. Here are some of the features:
+            </p>
+            <ul>
+              <li>Big</li>
+              <li>Large</li>
+              <li>Rock-like</li>
+            </ul>
+
+            <a href="../html/products/index.html" class="call-to-action"
+              >BUY NOW</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83241.49822091537!2d-123.30023065664064!3d49.30866229999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548671f8581c2551%3A0x23dba00e82a4b4d7!2sSiwash%20Rock!5e0!3m2!1sen!2sca!4v1761266804487!5m2!1sen!2sca"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <section class="contact-info">
+          <h2>Contact Us</h2>
+          <p>604-567-8910</p>
+          <p>support@rockbuddy.com</p>
+          <p>123 Fake Street</p>
+        </section>
+
+        <section class="social-media">
+          <h2>Follow Us</h2>
+          <div class="social-media-icons">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <script src="../javascript/index.js"></script>
+  </body>
+</html>

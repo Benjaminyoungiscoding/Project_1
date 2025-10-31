@@ -1,0 +1,927 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif
+}
+
+html,
+body {
+    max-width: 100%;
+    /*tells them to use the entire viewport*/
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+main {
+    /*sticky footer*/
+    flex: 1;
+    padding: 0 10px;
+    margin-bottom: 1rem;
+}
+
+body {
+    background-color: #F5F5F5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.map {
+    max-width: 100%;
+    height: auto;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-media-icons a {
+    font-size: 3rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+
+@media (min-width:320px) {
+    body {
+        font-size: 0.75rem;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #3C3C3C;
+        color: #2E2E2E;
+        position: relative;
+        /*parent of the nav*/
+    }
+
+    header a img {
+        max-height: 50px;
+    }
+
+    #nav {
+        display: none;
+        width: 100%;
+        /*takes entire width*/
+        position: absolute;
+        /*if you set to ABSOLUTE, it will find the nearest parent (header). it wont push stuff around, it "floats" on ;top of other content */
+        top: 100%
+            /*moves it down 100%* of parent, meaning it will be directly below the header. if it was 50%, it'll be just halfway of the header*/
+    }
+
+    .hero img {
+        width: 100%;
+        /*fill the width of container*/
+        height: auto;
+        /*keeps aspect ratio*/
+        max-height: 250px;
+        object-fit: cover;
+        object-position: center 20%
+    }
+
+
+    #nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-toggle {
+        display: inline-block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    #nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+
+    #nav li {
+        padding: 5px 0;
+        font-size: 1.5em;
+        font-weight: bold;
+        background-color: #E5E5E5;
+        justify-self: center;
+        width: 100%;
+        /*stretches across viewport*/
+        text-align: center;
+        /*centers text*/
+    }
+
+    #nav li:active {
+        background-color: #C0C0C0;
+    }
+
+    #nav a:active {
+        color: white
+    }
+
+
+    .testimonial {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .testimonial p {
+        font-style: italic;
+        font-size: 1rem;
+    }
+
+    .testimonial strong {
+        background-color: #fff176;
+
+
+    }
+
+    #nav a {
+        text-decoration: none;
+        width: 100%
+    }
+
+
+    .product-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+
+    .call-to-action {
+        display: inline-block;
+        background-color: black;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        margin: 1rem auto;
+        /*space around the button*/
+    }
+
+    .call-to-action:active {
+        background-color: #8E9A8F;
+        color: black;
+    }
+
+    /*will not show in dev tools. need to force hover state.*/
+
+    .product-highlight img {
+        max-width: 100%;
+
+    }
+
+
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: aliceblue;
+        max-width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        /*keeps it in scale*/
+    }
+
+    .card h2 {
+        text-align: center;
+    }
+
+    .card p {
+        margin: 10px;
+        padding-bottom: 15px;
+    }
+
+    .container button {
+        background-color: black;
+        color: white;
+        padding: 24px 48px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        margin: 1rem auto;
+        margin-bottom: 20px;
+    }
+
+    .gravel {
+        height: 180px;
+        object-position: center 110%
+    }
+
+
+    a {
+        color: #2E2E2E
+    }
+
+    main a:active {
+        color: #555555
+    }
+
+    main a:hover {
+        color: #A67C52
+    }
+
+
+
+    article {
+        margin-bottom: 20px;
+    }
+
+    .article-image {
+        display: block;
+        margin: auto;
+    }
+
+    blockquote {
+        background-color: #ECE8E1;
+        border-left: 5px solid #d2be84;
+        margin: 0;
+        padding: 0.75rem;
+        border-radius: 10px;
+    }
+
+    blockquote p:first-of-type {
+        font-weight: bold;
+    }
+
+    blockquote cite {
+        font-style: italic;
+        white-space: nowrap;
+    }
+
+    pre {
+        background-color: bisque;
+        border-radius: 10px;
+        margin: 0;
+        padding: 0.75rem
+    }
+
+
+    footer {
+        display: flex;
+        justify-content: center;
+        background-color: #3C3C3C;
+        color: #F5F5F5;
+        text-align: center;
+    }
+
+    .map {
+        display: none;
+    }
+
+    .social-media-icons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .social-media-icons a {
+        transition: transform 0.2s ease;
+        font-size: 2rem;
+        color: #FFFFFF;
+    }
+
+    .social-media a:active {
+        transform: scale(1.5);
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+}
+
+
+/* 600px */
+
+@media (min-width:600px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3C3C3C;
+        color: #2E2E2E;
+        position: relative;
+    }
+
+    header a img {
+        max-height: 50px;
+    }
+
+    #nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        /*if you set to ABSOLUTE, it will find the nearest parent. it wont push stuff around, it "floats" on top of other content */
+        top: 100%;
+
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+        /*preserves aspect ratio. fills container*/
+        object-position: center 20%
+    }
+
+
+    #nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        margin-right: 0;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    #nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+
+    #nav li {
+        padding: 5px 0;
+        font-size: 1.5em;
+        font-weight: bold;
+        background-color: #E5E5E5;
+        justify-self: center;
+        width: 100%;
+        /*stretches across viewport*/
+        text-align: center;
+        /*centers text*/
+    }
+
+
+    #nav li:active {
+        background-color: #C0C0C0;
+    }
+
+    #nav a {
+        text-decoration: none;
+        width: 100%
+    }
+
+    #nav a:active {
+        color: white
+    }
+
+
+    .product-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonial {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px
+    }
+
+    .testimonial p {
+        font-style: italic;
+        font-size: 1rem;
+    }
+
+    .testimonial strong {
+        background-color: #fff176;
+        white-space: nowrap;
+    }
+
+    .testimonial p:last-of-type {
+        text-align: center;
+    }
+
+
+    .call-to-action {
+        background-color: black;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        margin: 1rem auto;
+        /*space around the button*/
+    }
+
+    .call-to-action:active {
+        background-color: #8E9A8F;
+        color: black;
+        /*will not show in dev tools. need to force it into active state.*/
+
+    }
+
+
+    .product-highlight img {
+        max-width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+
+    }
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        /*allows flex items to go into the next line*/
+
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: aliceblue;
+        max-width: 90%;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .product-container article {
+        flex: 1 1 calc(50%);
+        /* fits two articles in a row*/
+        max-width: calc(50%);
+        /*tells the article not to exceed the 50%*/
+    }
+
+
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        /*keeps it in scale*/
+    }
+
+    .card h2 {
+        text-align: center;
+    }
+
+    .card p {
+        margin: 10px;
+        padding-bottom: 15px;
+    }
+
+
+
+    .gravel {
+        height: 180px;
+        object-position: center 100%;
+        object-fit: cover;
+    }
+
+
+    main a:active {
+        color: #555555
+    }
+
+    main a:hover {
+        color: #A67C52
+    }
+
+
+
+    .container button {
+        background-color: black;
+        color: white;
+        padding: 24px 24px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin: 1rem auto;
+        margin-bottom: 20px;
+    }
+
+    .container button:active {
+        transform: scale(1.1);
+    }
+
+    .article-image {
+        display: block;
+        margin: auto;
+    }
+
+    blockquote {
+        background-color: #ECE8E1;
+        border-left: 5px solid #d2be84;
+        margin: 0;
+        padding: 0.75rem;
+        border-radius: 10px;
+    }
+
+    blockquote p:first-of-type {
+        font-weight: bold;
+    }
+
+    blockquote cite {
+        font-style: italic;
+        white-space: nowrap;
+    }
+
+    pre {
+        background-color: bisque;
+        border-radius: 10px;
+        margin: 0;
+        padding: 0.75rem
+    }
+
+
+    footer {
+        display: flex;
+        background-color: #3C3C3C;
+        color: #F5F5F5;
+        text-align: center;
+    }
+
+    .footer-content {
+        display: flex;
+    }
+
+    .map {
+        display: none;
+    }
+
+    .contact-info {
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+
+
+    .social-media-icons {
+        display: flex;
+    }
+
+    .social-media {
+        padding-left: 10px;
+    }
+
+    .social-media-icons a {
+        transition: transform 0.2s ease;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        padding-right: 0;
+    }
+
+    .social-media a:active {
+        transform: scale(1.5);
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+}
+
+
+
+@media (min-width:1025px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3C3C3C;
+        color: #2E2E2E;
+        max-height: 50px;
+    }
+
+    header a img {
+        max-height: 50px;
+    }
+
+    #nav {
+        display: flex;
+        width: 100%;
+        position: static;
+        flex-direction: row;
+        justify-content: start;
+        height: 50px;
+
+
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+        object-fit: contain;
+    }
+
+
+    #nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        margin-right: 0;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    #nav ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        gap: 1rem;
+    }
+
+
+    #nav li {
+        padding: 5px 0;
+        font-size: 1.3rem;
+        font-weight: bold;
+        background-color: #E5E5E5;
+        width: 100%;
+        align-items: center;
+    }
+
+    #nav li:active {
+        background-color: #C0C0C0;
+    }
+
+    #nav li:hover {
+        background-color: #D0D0D0;
+    }
+
+    #nav a {
+        display: inline-block;
+        flex-wrap: nowrap;
+        text-decoration: none;
+        width: 100%;
+        line-height: 1;
+    }
+
+    #nav a:hover {
+        color: white;
+    }
+
+
+    .feature-product img {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+    }
+
+
+
+    .call-to-action {
+        display: inline-block;
+        background-color: black;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-left: 0
+            /*space around the button*/
+    }
+
+    .call-to-action:hover {
+        background-color: #8E9A8F;
+        color: black;
+    }
+
+    /*will not show in dev tools. need to force hover state.*/
+
+    .product-highlight img {
+        max-width: 100%;
+
+    }
+
+    .product-container {
+        display: flex;
+
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: aliceblue;
+        max-width: 90%;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .product-container article {
+        flex: 1 1 calc(33.3%);
+        /* since theres 3 articles in the product container, you are saying that each article should take 33.3%. This will fill the entire */
+        /* fits two articles in a row*/
+        max-width: calc(50%);
+    }
+
+    /*tells the article not to exceed the 50%*/
+
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        /*keeps it in scale*/
+    }
+
+    .card h2 {
+        text-align: center;
+    }
+
+    .card p {
+        margin: 10px;
+        padding-bottom: 15px;
+    }
+
+
+
+    .gravel {
+        height: 180px;
+        object-position: center 100%;
+        object-fit: cover;
+    }
+
+
+    main a:active {
+        color: #555555
+    }
+
+    main a:hover {
+        color: #A67C52
+    }
+
+    .container button {
+        background-color: black;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin: 1rem auto;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .container button:hover {
+        transform: scale(1.1);
+    }
+
+    .article-image {
+        display: block;
+        margin: auto;
+    }
+
+    blockquote {
+        background-color: #ECE8E1;
+        border-left: 5px solid #d2be84;
+        margin: 0;
+        padding: 0.75rem;
+        border-radius: 10px;
+    }
+
+    blockquote p:first-of-type {
+        font-weight: bold;
+    }
+
+    blockquote cite {
+        font-style: italic;
+        white-space: nowrap;
+    }
+
+    pre {
+        background-color: bisque;
+        border-radius: 10px;
+        margin: 0;
+        padding: 0.75rem
+    }
+
+
+    footer {
+        display: flex;
+        background-color: #3C3C3C;
+        color: #F5F5F5;
+        text-align: center;
+
+    }
+
+    .map {
+        display: block;
+        height: 200px;
+        width: 300px;
+        align-self: center;
+        margin-right: 30px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+
+    .contact-info {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+    .social-media-icons {
+        display: flex;
+    }
+
+    .social-media {
+        padding-left: 10px;
+    }
+
+    .social-media a {
+        transition: transform 0.2s ease;
+        font-size: 1.2rem;
+        color: #FFFFFF;
+        padding-right: 0;
+    }
+
+    .social-media a:hover {
+        transform: translateY(-1px);
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+
+
+}
